@@ -1,0 +1,34 @@
+ 
+main main_pair
+      write(141,*) "istep=",istep-1, surf_area1, tot_vol1
+      write(142,*) "istep=",istep-1, cen_mass1(1), cen_mass1(2), cen_mass1(3)
+      write(241,*) "istep=",istep-1, surf_area2, tot_vol2
+      write(242,*) "istep=",istep-1, cen_mass2(1), cen_mass2(2), cen_mass2(3)
+      write(183,*) i,j,"H",h1grid(j,i),"WS",w1grid(j,i) 
+      write(283,*) i,j,"H",h2grid(j,i),"WS",w2grid(j,i) 
+
+151: drop1, original order lege: x, y, z grid with istep
+251:
+152: drop1, original order lege: x, y, z grid withOUT istep
+252:
+
+
+261 : drop2, x,y,zmpole before repara
+
+sub mod_eqsamp_eval_grid_xyz_pair
+153: drop1, equally distributed sampled theta: x, y, z grid with istep
+253:
+154: drop1, equally distributed sampled theta: x, y, z grid withOUT istep
+254:
+
+
+sub eval_velo_pair_wmod
+          write(134,*) "istep=",istep,"u1grid x,y,z component"
+          write(234,*) "istep=",istep,"u2grid x,y,z component"
+
+write(109,*) "electrical total force on drop 1", "x,y,z component and magnitude"
+
+sub shf_curv_up
+          if (imag(ximpole(n,m)) .gt. 1d-14) then
+            write(113,*) "x",n,m,ximpole(n,m)
+          endif
